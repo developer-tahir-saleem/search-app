@@ -5,9 +5,9 @@ import com.mikaelslab.utils.Request;
 public class Main {
 
     public static void main(String[] args) {
-       Request request = new Request(args);
+       Request req = new Request(args);
 
-        if (request.isValidParam() && request.isValidPath()) {
+        if (req.isValidParam() && req.isValidPath() && req.isValidKeyword() && req.isValidPattern()) {
             System.out.println("Program Is working ");
         }
 

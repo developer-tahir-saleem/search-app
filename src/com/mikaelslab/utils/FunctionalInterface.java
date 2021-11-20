@@ -1,5 +1,5 @@
 package com.mikaelslab.utils;
 
-public interface FunInter {
+public interface FunctionalInterface {
      boolean apply(String[] arg);
 }

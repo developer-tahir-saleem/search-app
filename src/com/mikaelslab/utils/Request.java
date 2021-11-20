@@ -1,15 +1,8 @@
 package com.mikaelslab.utils;
 
-import com.sun.xml.internal.fastinfoset.util.StringArray;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.Optional;
-import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-import static com.mikaelslab.utils.Message.MS_REQUEST_PARAM_COUNT;
-import static com.mikaelslab.utils.Message.MS_REQUEST_VALID_PATH;
+import static com.mikaelslab.utils.Message.*;
 
 public class Request implements Validation {
 
@@ -21,26 +14,31 @@ public class Request implements Validation {
 
     @Override
     public boolean isValidParam() {
-        FunInter checkarg = (a) -> a.length == 3;
-        return this.showMessage(checkarg.apply(this.arg), MS_REQUEST_PARAM_COUNT);
+        FunctionalInterface checkargument = (a) -> a.length == 3;
+        return this.showMessage(checkargument.apply(this.arg), MS_REQUEST_PARAM_COUNT);
     }
 
     @Override
     public boolean isValidPath() {
-        FunInter checkStartWithDecimal = (a) -> a[0].startsWith(".");
-        boolean checkContainCharacter = Stream.of( ":","?","\"","<",">","*","..." ).anyMatch(x -> this.arg[0].contains(x));
+        FunctionalInterface checkStartWithDecimal = (a) -> a[0].startsWith(".");
+        boolean checkContainCharacter = Stream.of(":", "?", "\"", "<", ">", "*", "...").noneMatch(x -> this.arg[0].contains(x));
         boolean checkStart = checkStartWithDecimal.apply(this.arg);
-        return this.showMessage((checkContainCharacter && checkStart),MS_REQUEST_VALID_PATH);
+        return this.showMessage((checkContainCharacter && checkStart), MS_REQUEST_VALID_PATH);
     }
 
     @Override
     public boolean isValidKeyword() {
-        return false;
+//        Illegal Filename Characters
+        return this.showMessage(
+                Stream.of("`", "+", "=", "|", ",", "#", "@", "'", "!", "$", "/", "[", "]", "}", "{", "&", "%", ":", "?", "\"", "<", ">", "*", "...")
+                        .noneMatch(x -> this.arg[1].contains(x)), MS_REQUEST_VALID_ILLEGALCHARACTER);
     }
 
     @Override
     public boolean isValidPattern() {
-        return false;
+        return this.showMessage(
+                Stream.of("camel-case", "lower-case", "upper-case", "wild-card", "last-space")
+                        .noneMatch(x -> this.arg[2].contains(x)), MS_REQUEST_VALID_PATTERN);
     }
 
     @Override

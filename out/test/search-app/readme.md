@@ -38,5 +38,6 @@ $ java -jar ./build-out/target/search-app-v1.0.0.jar
 
 - Search Algo Logic 
    - Filter Cases  
+   - "camel-case", "lower-case", "upper-case", "wild-card", "last-space" , "all"
 
 - Readme Me and Doc
