@@ -48,6 +48,46 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/com/mikaelslab/utils/FunInter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/mikaelslab/utils/Message.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/mikaelslab/utils/Request.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/mikaelslab/utils/Validation.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/mikaelslab/utils/message.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/mikaelslab/utils/request.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/mikaelslab/utils/validation.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/mikaelslab/validation/request.java">
+          <value>
+            <set />
+          </value>
+        </entry>
       </map>
     </option>
   </component>

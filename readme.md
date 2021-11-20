@@ -16,7 +16,7 @@ $ mkdir build-out/target
 ```
 - [ ] Project Compile All Package
 ``` bash
-  $ javac -cp target:./lib/junit-platform-console-standalone-1.8.1.jar  ./src/com/mikaelslab/*.java -d ./build-out/
+  $ javac -cp target:./lib/junit-platform-console-standalone-1.8.1.jar  ./src/com/mikaelslab/utils/*.java ./src/com/mikaelslab/*.java -d ./build-out/
 ```
 - [ ] Project All Test Running 
 ``` bash
