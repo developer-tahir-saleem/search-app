@@ -4,7 +4,7 @@ package com.mikaelslab;
 import org.junit.jupiter.api.Test;
 
 
-class ClassATest {
+class CamelCaseTest {
 
     @Test
     void welcome() {

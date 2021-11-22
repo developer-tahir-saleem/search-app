@@ -30,15 +30,15 @@ public class Request implements Validation {
     public boolean isValidKeyword() {
 //        Illegal Filename Characters
         return this.showMessage(
-                Stream.of("`", "+", "=", "|", ",", "#", "@", "'", "!", "$", "/", "[", "]", "}", "{", "&", "%", ":", "?", "\"", "<", ">", "*", "...")
+                Stream.of("`", "+", "=", "|", ",", "#", "@", "'", "!", "$", "/", "[", "]", "}", "{", "&", "%", ":", "?", "\"", "<", ">", "...")
                         .noneMatch(x -> this.arg[1].contains(x)), MS_REQUEST_VALID_ILLEGALCHARACTER);
     }
 
     @Override
     public boolean isValidPattern() {
         return this.showMessage(
-                Stream.of("camel-case", "lower-case", "upper-case", "wild-card", "last-space")
-                        .noneMatch(x -> this.arg[2].contains(x)), MS_REQUEST_VALID_PATTERN);
+                Stream.of("camel-case", "lower-case", "upper-case","sensitive-case", "wild-card", "last-space")
+                        .anyMatch(x -> this.arg[2].contains(x)), MS_REQUEST_VALID_PATTERN);
     }
 
     @Override
