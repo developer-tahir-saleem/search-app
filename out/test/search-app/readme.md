@@ -1,9 +1,5 @@
-### Search Classes App 
-
-
-
-
-#### Plan and Task Breakdown
+### Search Classes App
+#### Document Build 
 
 - Project Setup build artifact
 - [ ] Create Project Build Directory  
@@ -31,13 +27,24 @@ $ jar cvfm ./build-out/target/search-app-v1.0.0.jar ./src/META-INF/MANIFEST.MF -
 $ java -jar ./build-out/target/search-app-v1.0.0.jar
 ```
 
+- [ ] Running Cases Camel Cases
+``` bash
+$ java -jar ./build-out/target/search-app-v1.0.0.jar  ./workdir FoBa camel-case
+```
+``` bash
+$ java -jar ./build-out/target/search-app-v1.0.0.jar  ./workdir FBar camel-case
+```
+``` bash
+$ java -jar ./build-out/target/search-app-v1.0.0.jar  ./workdir BF upper-case
+```
+``` bash
+$ java -jar ./build-out/target/search-app-v1.0.0.jar  ./workdir fbb sensitive-case
+```
+``` bash
+$ java -jar ./build-out/target/search-app-v1.0.0.jar  ./workdir FooBarzoo camel-case
+```
 
-- Prepare Functional code structure and unit test   
+``` bash
+$ java -jar ./build-out/target/search-app-v1.0.0.jar  ./workdir FooBarzoo camel-case
+```
 
-- Read File and Directory recursive 
-
-- Search Algo Logic 
-   - Filter Cases  
-   - "camel-case", "lower-case", "upper-case", "wild-card", "last-space" , "all"
-
-- Readme Me and Doc

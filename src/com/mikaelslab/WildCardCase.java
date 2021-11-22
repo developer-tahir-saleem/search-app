@@ -30,7 +30,7 @@ public class WildCardCase {
             for (Map.Entry me : files.files.entrySet()) {
                 String[] reItem = me.getValue().toString().split("\\s+");
 
-                if (me.getValue().toString().contains(x)) {
+                if (me.getValue().toString().contains(x) && input.contains("*")) {
 
                     result.add(reItem[0] + " - " + me.getKey());
                 }

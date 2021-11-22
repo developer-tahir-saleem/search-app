@@ -2,7 +2,7 @@
   <configuration default="false" name="Main" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="com.mikaelslab.Main" />
     <module name="search-app" />
-    <option name="PROGRAM_PARAMETERS" value="./workdir F*BarB wild-card" />
+    <option name="PROGRAM_PARAMETERS" value="./workdir B*rBaz wild-card" />
     <RunnerSettings RunnerId="Run" />
     <ConfigurationWrapper RunnerId="Run" />
     <method v="2">
